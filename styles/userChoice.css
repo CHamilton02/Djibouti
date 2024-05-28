@@ -1,19 +1,20 @@
 .game {
-  margin-top: 60px;
+  margin-top: 75px;
 }
 
 .user-choice {
   text-align: center;
 }
 
-.user-input,
-.user-input::placeholder {
+.user-input {
   font-family: Jaro;
   font-size: 20px;
   color: lightblue;
-  padding-top: 3px;
   padding-left: 5px;
-  padding-bottom: 3px;
+  border: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  height: 30px;
 }
 
 .user-submit {
@@ -24,4 +25,5 @@
   border: none;
   padding-top: 5px;
   padding-bottom: 5px;
+  border-radius: 5px;
 }

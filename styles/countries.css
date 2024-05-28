@@ -1,13 +1,14 @@
 .country-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  justify-content: center;
   text-align: center;
-  align-items: center;
   margin-top: 10px;
+  row-gap: 20px;
+  font-family: Jaro;
+  font-size: 24px;
 }
 
-.country-grid-item {
+.country-grid-flag {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,4 +18,26 @@
   border: none;
   object-fit: cover;
   margin-left: 10px;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.30);
+}
+
+.column-heading {
+  font-size: 32px;
+  color: lightblue;
+}
+
+.incorrect-first-letter {
+  font-size: 28px;
+  font-weight: bold;
+  color: red;
+}
+
+.incorrect-continent {
+  color: red; 
+  font-size: 28px;
+}
+
+.correct-value {
+  color: lightgreen;
+  font-size: 28px;
 }
