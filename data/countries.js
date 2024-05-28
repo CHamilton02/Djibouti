@@ -42,14 +42,14 @@ export class Country {
       HTML += `<div class="incorrect-value">${this.continent}</div>`
     }
     if (this.population > targetCountry.population) {
-      HTML += `<div>${this.population} &#8593;</div>`
+      HTML += `<div>${this.population} <span class="arrow">&#8595;</span></div>`
     } else {
-      HTML += `<div>${this.population} &#8595;</div>`
+      HTML += `<div>${this.population} <span class=arrow>&#8593;</span></div>`
     }
     if (this.area > targetCountry.area) {
-      HTML += `<div>${this.area} &#8593;</div>`
+      HTML += `<div>${this.area}km&#178; <span class="arrow">&#8595;</span></div>`
     } else {
-      HTML += `<div>${this.area} &#8595;</div>`
+      HTML += `<div>${this.area}km&#178; <span class=arrow>&#8593;</span></div>`
     }
     return HTML;
   }
@@ -57,7 +57,10 @@ export class Country {
 
 export const country = [
   new Country({flag: 'images/Country Flags/Italy.png', name: 'Italy', capital: 'Rome', continent: 'Europe', population: 58853482, area: 301340}),
-  new Country({flag: 'images/Country Flags/Canada.png', name: 'Canada', capital: 'Ottawa', continent: 'North America', population: 40769890, area: 9984670})
+  new Country({flag: 'images/Country Flags/Canada.png', name: 'Canada', capital: 'Ottawa', continent: 'North America', population: 40769890, area: 9984670}),
+  new Country({flag: 'images/Country Flags/USA.png', name: 'USA', capital: 'Washington', continent: 'North America', population: 334914895, area: 9833520}),
+  new Country({flag: 'images/Country Flags/Japan.png', name: 'Japan', capital: 'Tokyo', continent: 'Asia', population: 123970000, area: 377975}),
+  new Country({flag: 'images/Country Flags/Cambodia.png', name: 'Cambodia', capital: 'Phnom Penh', continent: 'Asia', population: 17091464, area: 181035})
 ];
 
-export const desiredCountry = new Country({flag: 'images/Country Flags/Italy.png', name: 'Italy', capital: 'Rome', continent: 'Europe', population: 58853482, area: 301340});
+export const desiredCountry = new Country(country[1]);
