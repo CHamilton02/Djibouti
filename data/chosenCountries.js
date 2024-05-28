@@ -4,6 +4,7 @@ export class CountryList {
 
   constructor(localStorageKey) {
     this.#localStorageKey = localStorageKey;
+    this.countries = [];
     //this.#loadFromStorage();
   }
 
