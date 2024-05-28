@@ -1,0 +1,12 @@
+.header {
+  text-align: center;
+  font-family: Jaro, Arial;
+  font-size: 38px;
+  color: black;
+  background-image: url('../Country Flags/Collection-national-flags.png');
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  padding-bottom: 5px;
+}

@@ -1,0 +1,27 @@
+.game {
+  margin-top: 60px;
+}
+
+.user-choice {
+  text-align: center;
+}
+
+.user-input,
+.user-input::placeholder {
+  font-family: Jaro;
+  font-size: 20px;
+  color: lightblue;
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-bottom: 3px;
+}
+
+.user-submit {
+  color: white;
+  font-family: Jaro;
+  font-size: 20px;
+  background-color: lightblue;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
