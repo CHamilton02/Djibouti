@@ -4,7 +4,7 @@ export class CountryList {
 
   constructor(localStorageKey) {
     this.#localStorageKey = localStorageKey;
-    this.#loadFromStorage();
+    //this.#loadFromStorage();
   }
 
   #loadFromStorage() {
