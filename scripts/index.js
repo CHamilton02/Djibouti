@@ -37,7 +37,7 @@ function renderHTML() {
     });
   })
 
-  document.querySelector('.js-country-grid').innerHTML = gameHTML;
+  document.querySelector('.js-country-grid').innerHTML = gameHTML + "hello";
 }
 
 renderHTML();
