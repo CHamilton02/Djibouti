@@ -29,10 +29,12 @@ function renderHTML() {
   <div class="column-heading">Population</div>
   <div class="column-heading">Area</div>`
 
-  country.forEach((currentCountry) => {
-    if (countryList.countries.includes(currentCountry.name)) {
-      gameHTML += currentCountry.getHTML(desiredCountry);
-    }
+  countryList.countries.forEach((currentCountry) => {
+    country.forEach((chosenCountry) => {
+      if (currentCountry === chosenCountry.name) {
+        gameHTML += chosenCountry.getHTML(desiredCountry);
+      }
+    });
   })
 
   document.querySelector('.js-country-grid').innerHTML = gameHTML;
