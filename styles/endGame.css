@@ -4,4 +4,19 @@
   font-family: Jaro;
   text-align: center;
   margin-top: 30px;
+  animation: slam-animation 2s ease-in-out;
+}
+
+@keyframes slam-animation {
+  0%,
+  50%,
+  100% {
+    font-size: 32px;
+  }
+  25% {
+    font-size: 64px;
+  }
+  75% {
+    font-size: 48px;
+  }
 }

@@ -20,7 +20,7 @@ function renderHTML() {
     });
   } else {
     document.querySelector('.js-user-choice').innerHTML = '';
-    document.querySelector('.js-endgame').innerHTML = `Congrats! You found the country in ${chosenCountries.length} attempts.`;
+    document.querySelector('.js-endgame').innerHTML = `<div class="congrats-message">Congrats! You found the country in ${chosenCountries.length} attempts.</div>`;
   }
 
   gameHTML += `<div></div>
