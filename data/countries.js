@@ -255,3 +255,4 @@ export const country = [
   ];
 
 export const desiredCountry = new Country(country[Math.floor(Math.random() * country.length)]);
+export const chosenCountries = [];

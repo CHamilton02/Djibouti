@@ -1,10 +1,9 @@
-import {countryList} from '../data/chosenCountries.js';
-import {country, desiredCountry} from '../data/countries.js';
+import {country, desiredCountry, chosenCountries} from '../data/countries.js';
 
 
 function renderHTML() {
   let gameHTML = '';
-  if (!countryList.countries.includes(desiredCountry.name)) {
+  if (!chosenCountries.includes(desiredCountry.name)) {
     let userChoiceHTML = '<select class="user-input" id="country-choice"><option disabled selected value>Select a country</option>';
     country.forEach((currentCountry) => {
       userChoiceHTML += `<option value="${currentCountry.name}">${currentCountry.name}</option>`
@@ -14,12 +13,12 @@ function renderHTML() {
 
     document.querySelector('.js-user-submit').addEventListener('click', () => {
       const chosenValue = document.getElementById('country-choice').value;
-      countryList.addCountry(chosenValue);
+      chosenCountries.push(chosenValue);
       renderHTML();
     });
   } else {
     document.querySelector('.js-user-choice').innerHTML = '';
-    document.querySelector('.js-endgame').innerHTML = `Congrats! You found the country in ${countryList.countries.length} attempts.`;
+    document.querySelector('.js-endgame').innerHTML = `Congrats! You found the country in ${chosenCountries.length} attempts.`;
   }
 
   gameHTML += `<div></div>
@@ -29,7 +28,7 @@ function renderHTML() {
   <div class="column-heading">Population</div>
   <div class="column-heading">Area</div>`
 
-  countryList.countries.forEach((currentCountry) => {
+  chosenCountries.forEach((currentCountry) => {
     country.forEach((chosenCountry) => {
       if (currentCountry === chosenCountry.name) {
         gameHTML += chosenCountry.getHTML(desiredCountry);
