@@ -11,7 +11,7 @@
   height: 350px;
   width: 500px;
   background-color: rgb(240, 240, 240);
-  color: lightblue;
+  color: rgb(119, 206, 235);
   padding: 20px 20px 20px 20px;
   font-family: Jaro;
   position: fixed;
@@ -25,14 +25,14 @@
 .welcome-title {
   font-size: 20px;
   color: white;
-  background-color: lightblue;
+  background-color: rgb(119, 206, 235);
 }
 
 .get-started-button {
   font-family: Jaro;
   border: none;
   color: white;
-  background-color: lightblue;
+  background-color: rgb(119, 206, 235);
   font-size: 20px;
   padding-top: 2px;
   padding-bottom: 2px;
