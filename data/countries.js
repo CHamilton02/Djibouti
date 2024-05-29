@@ -165,7 +165,7 @@ export const country = [
   new Country({flag: 'images/Country Flags/Marshall_Islands.png', name: 'Marshall Islands', capital: 'Majuro', continent: 'Oceania', population: 59000, area: 181}),
   new Country({flag: 'images/Country Flags/Mauritania.png', name: 'Mauritania', capital: 'Nouakchott', continent: 'Africa', population: 4961000, area: 1030700}),
   new Country({flag: 'images/Country Flags/Mauritius.png', name: 'Mauritius', capital: 'Port Louis', continent: 'Africa', population: 1272000, area: 2040}),
-  new Country({flag: 'images/Country Flags/Mexico.png', name: 'Mexico', capital: 'Mexico City', continent: 'North America', population: 128000000, area: 1964375}),
+  new Country({flag: 'images/Country Flags/Mexico.webp', name: 'Mexico', capital: 'Mexico City', continent: 'North America', population: 128000000, area: 1964375}),
   new Country({flag: 'images/Country Flags/Micronesia.png', name: 'Micronesia', capital: 'Palikir', continent: 'Oceania', population: 115021, area: 702}),
   new Country({flag: 'images/Country Flags/Moldova.png', name: 'Moldova', capital: 'Chișinău', continent: 'Europe', population: 2622000, area: 33846}),
   new Country({flag: 'images/Country Flags/Monaco.png', name: 'Monaco', capital: 'Monaco', continent: 'Europe', population: 38300, area: 2}),
