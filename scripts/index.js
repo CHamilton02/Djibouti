@@ -4,7 +4,7 @@ import {country, desiredCountry, chosenCountries} from '../data/countries.js';
 function renderHTML() {
   let gameHTML = '';
   if (!chosenCountries.includes(desiredCountry.name)) {
-    let userChoiceHTML = `<input class="user-input" list="countries" id="country-choice" name="country-choice"/>
+    let userChoiceHTML = `<input class="user-input" list="countries" placeholder="Select a country" id="country-choice" name="country-choice"/>
     <datalist id="countries">`;
     country.forEach((currentCountry) => {
       userChoiceHTML += `<option value="${currentCountry.name}"></option>`

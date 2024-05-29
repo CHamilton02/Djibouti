@@ -6,6 +6,7 @@
   row-gap: 20px;
   font-family: Jaro;
   font-size: 24px;
+  align-items: center;
 }
 
 .country-grid-flag {
@@ -39,6 +40,10 @@
   font-size: 28px;
 }
 
+.country-details-animation {
+  animation: bounce 2s ease-in-out;
+}
+
 @keyframes slide-in-left {
   0% {
     transform: translateX(-100%);
@@ -47,5 +52,23 @@
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-30px);
   }
 }
