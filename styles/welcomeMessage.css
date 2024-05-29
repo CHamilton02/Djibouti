@@ -8,9 +8,8 @@
 }
 
 .welcome-box {
-  height: 350px;
-  width: 500px;
-  background-color: rgb(240, 240, 240);
+  width: 515px;
+  background-color: rgb(220, 220, 220);
   color: rgb(119, 206, 235);
   padding: 20px 20px 20px 20px;
   font-family: Jaro;
@@ -26,6 +25,8 @@
   font-size: 20px;
   color: white;
   background-color: rgb(119, 206, 235);
+  margin-bottom: 10px;
+  padding-left: 10px;
 }
 
 .get-started-button {
@@ -40,4 +41,9 @@
   padding-right: 10px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
