@@ -65,10 +65,10 @@
   }
 
   40% {
-    transform: translateY(-30px);
+    transform: translateY(-15px);
   }
 
   60% {
-    transform: translateY(-30px);
+    transform: translateY(-5px);
   }
 }
