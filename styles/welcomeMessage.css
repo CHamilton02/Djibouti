@@ -1,0 +1,43 @@
+.faded-background {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.welcome-box {
+  height: 350px;
+  width: 500px;
+  background-color: rgb(240, 240, 240);
+  color: lightblue;
+  padding: 20px 20px 20px 20px;
+  font-family: Jaro;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0 0 5px black;
+}
+
+.welcome-title {
+  font-size: 20px;
+  color: white;
+  background-color: lightblue;
+}
+
+.get-started-button {
+  font-family: Jaro;
+  border: none;
+  color: white;
+  background-color: lightblue;
+  font-size: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
