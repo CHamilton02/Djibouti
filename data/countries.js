@@ -62,7 +62,7 @@ export const country = [
   new Country({flag: 'images/Country Flags/Andorra.png', name: 'Andorra', capital: 'Andorra la Vella', continent: 'Europe', population: 79658, area: 468}),
   new Country({flag: 'images/Country Flags/Angola.png', name: 'Angola', capital: 'Luanda', continent: 'Africa', population: 35300000, area: 1246700}),
   new Country({flag: 'images/Country Flags/Antigua_and_Barbuda.png', name: 'Antigua and Barbuda', capital: 'Saint John\'s', continent: 'North America', population: 97440, area: 442}),
-  new Country({flag: 'images/Country Flags/Argentina.png', name: 'Argentina', capital: 'Buenos Aires', continent: 'South America', population: 45720000, area: 2780400}),
+  new Country({flag: 'images/Country Flags/Argentina.webp', name: 'Argentina', capital: 'Buenos Aires', continent: 'South America', population: 45720000, area: 2780400}),
   new Country({flag: 'images/Country Flags/Armenia.png', name: 'Armenia', capital: 'Yerevan', continent: 'Asia', population: 2963000, area: 29743}),
   new Country({flag: 'images/Country Flags/Australia.png', name: 'Australia', capital: 'Canberra', continent: 'Oceania', population: 26850000, area: 7692024}),
   new Country({flag: 'images/Country Flags/Austria.png', name: 'Austria', capital: 'Vienna', continent: 'Europe', population: 9006000, area: 83871}),
