@@ -111,7 +111,7 @@ export const country = [
   new Country({flag: 'images/Country Flags/Eritrea.png', name: 'Eritrea', capital: 'Asmara', continent: 'Africa', population: 3720000, area: 117600}),
   new Country({flag: 'images/Country Flags/Estonia.png', name: 'Estonia', capital: 'Tallinn', continent: 'Europe', population: 1328000, area: 45228}),
   new Country({flag: 'images/Country Flags/Eswatini.png', name: 'Eswatini', capital: 'Mbabane', continent: 'Africa', population: 1170000, area: 17364}),
-  new Country({flag: 'images/Country Flags/Ethiopia.png', name: 'Ethiopia', capital: 'Addis Ababa', continent: 'Africa', population: 126500000, area: 1104300}),
+  new Country({flag: 'images/Country Flags/Ethiopia.svg', name: 'Ethiopia', capital: 'Addis Ababa', continent: 'Africa', population: 126500000, area: 1104300}),
   new Country({flag: 'images/Country Flags/Fiji.png', name: 'Fiji', capital: 'Suva', continent: 'Oceania', population: 929000, area: 18274}),
   new Country({flag: 'images/Country Flags/Finland.png', name: 'Finland', capital: 'Helsinki', continent: 'Europe', population: 5541000, area: 338424}),
   new Country({flag: 'images/Country Flags/France.png', name: 'France', capital: 'Paris', continent: 'Europe', population: 67390000, area: 551695}),
