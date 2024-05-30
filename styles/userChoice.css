@@ -6,7 +6,7 @@
 .user-input {
   font-family: Jaro;
   font-size: 20px;
-  color: rgb(119, 206, 235);
+  color: rgb(95, 198, 233);
   padding-left: 5px;
   border: solid;
   border-width: 2px;
@@ -18,7 +18,7 @@
   color: white;
   font-family: Jaro;
   font-size: 20px;
-  background-color: rgb(119, 206, 235);
+  background-color: rgb(95, 198, 233);
   border: none;
   padding-top: 8px;
   padding-bottom: 8px;

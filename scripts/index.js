@@ -60,11 +60,14 @@ if (!noMessage) {
     <div>3. Use the hints to make your next guess.</div>
     <div>4. Continue guessing until you identify the correct country.</div>
     <div>Test your knowledge, sharpen your geography skills, and see how quickly you can guess the right country. Good luck and have fun exploring the world with Djibouti.</div>
-    <div style="text-align: center";><button class="get-started-button js-get-started-button">Get Started</button></div>
+    <div style="text-align: center";><button class="get-started-button js-get-started-button">Get Started</button><input class="show-again" type="checkbox" id="showAgain"><label for="showAgain">Don't show this message again.</label></div>
   </div>
 </div>`
   document.querySelector('.js-get-started-button').addEventListener('click', () => {
+    if (document.getElementById("showAgain").checked) {
+      console.log("Hello");
+      localStorage.setItem('noMessage', true);
+    }
     document.querySelector('.faded-background').remove();
-    localStorage.setItem('noMessage', true);
   })
 }

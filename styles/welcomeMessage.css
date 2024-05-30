@@ -9,10 +9,11 @@
 
 .welcome-box {
   width: 515px;
-  background-color: rgb(220, 220, 220);
-  color: rgb(119, 206, 235);
+  background-color: rgb(240, 240, 240);
+  color: rgb(95, 198, 233);
   padding: 20px 20px 20px 20px;
   font-family: Jaro;
+  font-size: 20px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -22,9 +23,9 @@
 }
 
 .welcome-title {
-  font-size: 20px;
+  font-size: 30px;
   color: white;
-  background-color: rgb(119, 206, 235);
+  background-color: rgb(95, 198, 233);
   margin-bottom: 10px;
   padding-left: 10px;
 }
@@ -33,7 +34,7 @@
   font-family: Jaro;
   border: none;
   color: white;
-  background-color: rgb(119, 206, 235);
+  background-color: rgb(95, 198, 233);
   font-size: 20px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -41,9 +42,14 @@
   padding-right: 10px;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 ul {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.show-again {
+  margin-left: 20px;
 }
