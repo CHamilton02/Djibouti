@@ -15,8 +15,13 @@ function renderHTML() {
 
     document.querySelector('.js-user-submit').addEventListener('click', () => {
       const chosenValue = document.getElementById('country-choice').value;
-      chosenCountries.push(chosenValue);
-      renderHTML();
+      document.getElementById('country-choice').value = '';
+      country.forEach((chosenCountry) => {
+        if (chosenValue === chosenCountry.name) {
+          document.querySelector('.js-country-grid').insertAdjacentHTML('beforeend', chosenCountry.getHTML(desiredCountry));
+        }
+      });
+      
     });
   } else {
     document.querySelector('.js-user-choice').innerHTML = '';
@@ -29,16 +34,6 @@ function renderHTML() {
   <div class="column-heading">Continent</div>
   <div class="column-heading">Population</div>
   <div class="column-heading">Area</div>`
-
-  chosenCountries.forEach((currentCountry) => {
-    country.forEach((chosenCountry) => {
-      if (currentCountry === chosenCountry.name) {
-        gameHTML += chosenCountry.getHTML(desiredCountry);
-      }
-    });
-  })
-
-  document.querySelector('.js-country-grid').innerHTML = gameHTML;
 }
 
 renderHTML();
