@@ -15,43 +15,44 @@ export class Country {
     this.area = countryDetails.area;
   }
 
-  getHTML(targetCountry) {
+  generateHTML(targetCountry) {
     let HTML = '';
     if (this.name === targetCountry.name) {
-      return `<img class="country-grid-flag" src="${this.flag}">
+      document.querySelector('.js-country-grid').insertAdjacentHTML('beforeend', `<img class="country-grid-flag" src="${this.flag}">
       <div class="country-details-animation correct-value">${this.name}</div>
       <div class="country-details-animation correct-value">${this.capital}</div>
       <div class="country-details-animation correct-value">${this.continent}</div>
       <div class="country-details-animation correct-value">${this.population}</div>
-      <div class="country-details-animation correct-value">${this.area}km&#178;</div>`
-    }
-    HTML += `<img class="country-grid-flag" src="${this.flag}">`
-    if (this.name.charAt(0) === targetCountry.name.charAt(0)) {
-      HTML += `<div class="country-details-animation"><span class="correct-value">${this.name.charAt(0)}</span>${this.name.substring(1)}</div>`
+      <div class="country-details-animation correct-value">${this.area}km&#178;</div>`);
     } else {
-      HTML += `<div class="country-details-animation"><span class="incorrect-value">${this.name.charAt(0)}</span>${this.name.substring(1)}</div>`
+      HTML += `<img class="country-grid-flag" src="${this.flag}">`
+      if (this.name.charAt(0) === targetCountry.name.charAt(0)) {
+        HTML += `<div class="country-details-animation"><span class="correct-value">${this.name.charAt(0)}</span>${this.name.substring(1)}</div>`
+      } else {
+        HTML += `<div class="country-details-animation"><span class="incorrect-value">${this.name.charAt(0)}</span>${this.name.substring(1)}</div>`
+      }
+      if (this.capital.charAt(0) === targetCountry.capital.charAt(0)) {
+        HTML += `<div class="country-details-animation"><span class="correct-value">${this.capital.charAt(0)}</span>${this.capital.substring(1)}</div>`
+      } else {
+        HTML += `<div class="country-details-animation"><span class="incorrect-value">${this.capital.charAt(0)}</span>${this.capital.substring(1)}</div>`
+      }
+      if (this.continent === targetCountry.continent) {
+        HTML += `<div class="country-details-animation correct-value">${this.continent}</div>`
+      } else {
+        HTML += `<div class="country-details-animation incorrect-value">${this.continent}</div>`
+      }
+      if (this.population > targetCountry.population) {
+        HTML += `<div class="country-details-animation">${this.population} <span class="arrow">&#8595;</span></div>`
+      } else {
+        HTML += `<div class="country-details-animation">${this.population} <span class=arrow>&#8593;</span></div>`
+      }
+      if (this.area > targetCountry.area) {
+        HTML += `<div class="country-details-animation">${this.area}km&#178; <span class="arrow">&#8595;</span></div>`
+      } else {
+        HTML += `<div class="country-details-animation">${this.area}km&#178; <span class=arrow>&#8593;</span></div>`
+      }
+      document.querySelector('.js-country-grid').insertAdjacentHTML('beforeend', HTML);
     }
-    if (this.capital.charAt(0) === targetCountry.capital.charAt(0)) {
-      HTML += `<div class="country-details-animation"><span class="correct-value">${this.capital.charAt(0)}</span>${this.capital.substring(1)}</div>`
-    } else {
-      HTML += `<div class="country-details-animation"><span class="incorrect-value">${this.capital.charAt(0)}</span>${this.capital.substring(1)}</div>`
-    }
-    if (this.continent === targetCountry.continent) {
-      HTML += `<div class="country-details-animation correct-value">${this.continent}</div>`
-    } else {
-      HTML += `<div class="country-details-animation incorrect-value">${this.continent}</div>`
-    }
-    if (this.population > targetCountry.population) {
-      HTML += `<div class="country-details-animation">${this.population} <span class="arrow">&#8595;</span></div>`
-    } else {
-      HTML += `<div class="country-details-animation">${this.population} <span class=arrow>&#8593;</span></div>`
-    }
-    if (this.area > targetCountry.area) {
-      HTML += `<div class="country-details-animation">${this.area}km&#178; <span class="arrow">&#8595;</span></div>`
-    } else {
-      HTML += `<div class="country-details-animation">${this.area}km&#178; <span class=arrow>&#8593;</span></div>`
-    }
-    return HTML;
   }
 }
 

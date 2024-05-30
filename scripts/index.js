@@ -1,9 +1,10 @@
 import {country, desiredCountry, chosenCountries} from '../data/countries.js';
-import {isMobile} from '../utils/mobileCheck.js';
+import {isMobile} from './utils/mobileCheck.js';
+
+console.log(desiredCountry);
 
 function renderHTML() {
-  let gameHTML = '';
-  if (!chosenCountries.includes(desiredCountry.name) && !isMobile.any()) {
+  if (!isMobile.any()) {
     let userChoiceHTML = `<input class="user-input" list="countries" placeholder="Select a country" id="country-choice" name="country-choice"/>
     <datalist id="countries">`;
     country.forEach((currentCountry) => {
@@ -15,14 +16,23 @@ function renderHTML() {
 
     document.querySelector('.js-user-submit').addEventListener('click', () => {
       const chosenValue = document.getElementById('country-choice').value;
-      document.getElementById('country-choice').value = '';
-      country.forEach((chosenCountry) => {
-        if (chosenValue === chosenCountry.name) {
-          document.querySelector('.js-country-grid').insertAdjacentHTML('beforeend', chosenCountry.getHTML(desiredCountry));
-        }
-      });
+      if (chosenValue === desiredCountry.name) {
+        desiredCountry.generateHTML(desiredCountry);
+        document.querySelector('.js-user-choice').innerHTML = '';
+        document.querySelector('.js-endgame').innerHTML = `<div class="congrats-message">Congrats! You found the country in ${chosenCountries.length + 1} attempts.</div>`;
+      } else if (!chosenCountries.includes(chosenValue)) {
+        chosenCountries.push(chosenValue);
+        country.forEach((chosenCountry) => {
+          if (chosenValue === chosenCountry.name) {
+            chosenCountry.generateHTML(desiredCountry);
+          }
+        });
+        document.getElementById('country-choice').value = '';
+      } else {
+        document.getElementById('country-choice').value = '';
+      }
     });
-  } else if (!chosenCountries.includes(desiredCountry.name) && isMobile.any()) {
+  } else {
     let userChoiceHTML = `<select class="user-input" list="countries" id="country-choice" name="country-choice"/>
     <datalist id="countries">`;
     country.forEach((currentCountry) => {
@@ -34,19 +44,25 @@ function renderHTML() {
 
     document.querySelector('.js-user-submit').addEventListener('click', () => {
       const chosenValue = document.getElementById('country-choice').value;
-      document.getElementById('country-choice').value = '';
-      country.forEach((chosenCountry) => {
-        if (chosenValue === chosenCountry.name) {
-          document.querySelector('.js-country-grid').insertAdjacentHTML('beforeend', chosenCountry.getHTML(desiredCountry));
-        }
-      });
+      if (chosenValue === desiredCountry.name) {
+        desiredCountry.generateHTML(desiredCountry);
+        document.querySelector('.js-user-choice').innerHTML = '';
+        document.querySelector('.js-endgame').innerHTML = `<div class="congrats-message">Congrats! You found the country in ${chosenCountries.length + 1} attempts.</div>`;
+      } else if (!chosenCountries.includes(chosenValue)) {
+        chosenCountries.push(chosenValue);
+        country.forEach((chosenCountry) => {
+          if (chosenValue === chosenCountry.name) {
+            chosenCountry.generateHTML(desiredCountry);
+          }
+        });
+        document.getElementById('country-choice').value = '';
+      } else {
+        document.getElementById('country-choice').value = '';
+      }
     });
-  } else {
-    document.querySelector('.js-user-choice').innerHTML = '';
-    document.querySelector('.js-endgame').innerHTML = `<div class="congrats-message">Congrats! You found the country in ${chosenCountries.length} attempts.</div>`;
   }
 
-  gameHTML += `<div></div>
+  document.querySelector('.js-country-grid').innerHTML = `<div></div>
   <div class="column-heading">Country</div>
   <div class="column-heading">Capital</div>
   <div class="column-heading">Continent</div>
@@ -78,7 +94,6 @@ if (!noMessage) {
 </div>`
   document.querySelector('.js-get-started-button').addEventListener('click', () => {
     if (document.getElementById("showAgain").checked) {
-      console.log("Hello");
       localStorage.setItem('noMessage', true);
     }
     document.querySelector('.faded-background').remove();
