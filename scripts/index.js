@@ -1,9 +1,9 @@
 import {country, desiredCountry, chosenCountries} from '../data/countries.js';
-
+import {isMobile} from '../utils/mobileCheck.js';
 
 function renderHTML() {
   let gameHTML = '';
-  if (!chosenCountries.includes(desiredCountry.name)) {
+  if (!chosenCountries.includes(desiredCountry.name) && !isMobile.any()) {
     let userChoiceHTML = `<input class="user-input" list="countries" placeholder="Select a country" id="country-choice" name="country-choice"/>
     <datalist id="countries">`;
     country.forEach((currentCountry) => {
@@ -21,7 +21,25 @@ function renderHTML() {
           document.querySelector('.js-country-grid').insertAdjacentHTML('beforeend', chosenCountry.getHTML(desiredCountry));
         }
       });
-      
+    });
+  } else if (!chosenCountries.includes(desiredCountry.name) && isMobile.any()) {
+    let userChoiceHTML = `<select class="user-input" list="countries" id="country-choice" name="country-choice"/>
+    <datalist id="countries">`;
+    country.forEach((currentCountry) => {
+      userChoiceHTML += `<option value="${currentCountry.name}">${currentCountry.name}</option>`
+    })
+    userChoiceHTML += `</select>
+    <button class="user-submit js-user-submit">Submit</button>`;
+    document.querySelector('.js-user-choice').innerHTML = userChoiceHTML;
+
+    document.querySelector('.js-user-submit').addEventListener('click', () => {
+      const chosenValue = document.getElementById('country-choice').value;
+      document.getElementById('country-choice').value = '';
+      country.forEach((chosenCountry) => {
+        if (chosenValue === chosenCountry.name) {
+          document.querySelector('.js-country-grid').insertAdjacentHTML('beforeend', chosenCountry.getHTML(desiredCountry));
+        }
+      });
     });
   } else {
     document.querySelector('.js-user-choice').innerHTML = '';
