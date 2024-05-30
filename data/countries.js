@@ -199,7 +199,7 @@ export const country = [
   new Country({flag: 'images/Country Flags/Qatar.png', name: 'Qatar', capital: 'Doha', continent: 'Asia', population: 2960000, area: 11586}),
   new Country({flag: 'images/Country Flags/Republic_of_the_Congo.png', name: 'Republic of the Congo', capital: 'Brazzaville', continent: 'Africa', population: 5809000, area: 342000}),
   new Country({flag: 'images/Country Flags/Romania.png', name: 'Romania', capital: 'Bucharest', continent: 'Europe', population: 19160000, area: 238397}),
-  new Country({flag: 'images/Country Flags/Russia.png', name: 'Russia', capital: 'Moscow', continent: 'Europe', population: 143400000, area: 17098242}),
+  new Country({flag: 'images/Country Flags/Russia.png', name: 'Russia', capital: 'Moscow', continent: 'Asia', population: 143400000, area: 17098242}),
   new Country({flag: 'images/Country Flags/Rwanda.png', name: 'Rwanda', capital: 'Kigali', continent: 'Africa', population: 13610000, area: 26338}),
   new Country({flag: 'images/Country Flags/Saint_Kitts_and_Nevis.png', name: 'Saint Kitts and Nevis', capital: 'Basseterre', continent: 'North America', population: 47000, area: 261}),
   new Country({flag: 'images/Country Flags/Saint_Lucia.png', name: 'Saint Lucia', capital: 'Castries', continent: 'North America', population: 180000, area: 617}),
