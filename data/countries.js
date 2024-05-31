@@ -44,12 +44,12 @@ export class Country {
       if (this.population > targetCountry.population) {
         HTML += `<div class="country-details-animation">${this.population} <span class="arrow">&#8595;</span></div>`
       } else {
-        HTML += `<div class="country-details-animation">${this.population} <span class=arrow>&#8593;</span></div>`
+        HTML += `<div class="country-details-animation">${this.population} <span class="arrow">&#8593;</span></div>`
       }
       if (this.area > targetCountry.area) {
         HTML += `<div class="country-details-animation">${this.area}km&#178; <span class="arrow">&#8595;</span></div>`
       } else {
-        HTML += `<div class="country-details-animation">${this.area}km&#178; <span class=arrow>&#8593;</span></div>`
+        HTML += `<div class="country-details-animation">${this.area}km&#178; <span class="arrow">&#8593;</span></div>`
       }
       document.querySelector('.js-country-grid').insertAdjacentHTML('beforeend', HTML);
     }
@@ -243,7 +243,7 @@ export const country = [
   new Country({flag: 'images/Country Flags/Ukraine.png', name: 'Ukraine', capital: 'Kyiv', continent: 'Europe', population: 36670000, area: 603550}),
   new Country({flag: 'images/Country Flags/United_Arab_Emirates.png', name: 'United Arab Emirates', capital: 'Abu Dhabi', continent: 'Asia', population: 9786000, area: 83600}),
   new Country({flag: 'images/Country Flags/United_Kingdom.webp', name: 'United Kingdom', capital: 'London', continent: 'Europe', population: 67560000, area: 243610}),
-  new Country({flag: 'images/Country Flags/United_States.png', name: 'United States', capital: 'Washington, D.C.', continent: 'North America', population: 332300000, area: 9833517}),
+  new Country({flag: 'images/Country Flags/United_States.png', name: 'United States', capital: 'Washington', continent: 'North America', population: 332300000, area: 9833517}),
   new Country({flag: 'images/Country Flags/Uruguay.png', name: 'Uruguay', capital: 'Montevideo', continent: 'South America', population: 3497000, area: 176215}),
   new Country({flag: 'images/Country Flags/Uzbekistan.png', name: 'Uzbekistan', capital: 'Tashkent', continent: 'Asia', population: 36040000, area: 448978}),
   new Country({flag: 'images/Country Flags/Vanuatu.png', name: 'Vanuatu', capital: 'Port Vila', continent: 'Oceania', population: 319000, area: 12189}),
