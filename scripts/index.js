@@ -1,8 +1,6 @@
 import {country, desiredCountry, chosenCountries} from '../data/countries.js';
 import {isMobile} from './utils/mobileCheck.js';
 
-console.log(desiredCountry);
-
 function renderHTML() {
   if (!isMobile.any()) {
     let userChoiceHTML = `<input class="user-input" list="countries" placeholder="Select a country" id="country-choice" name="country-choice"/>
