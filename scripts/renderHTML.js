@@ -1,4 +1,4 @@
-import {country, desiredCountry, chosenCountries} from '../data/countries.js';
+import {country} from '../data/countries.js';
 import {userSubmit} from './buttonFunctions.js';
 
 export function welcomeMessage() {
