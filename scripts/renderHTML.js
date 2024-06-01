@@ -1,5 +1,5 @@
 import {country} from '../data/countries.js';
-import {userSubmit} from './buttonFunctions.js';
+import {userSubmit, userClear} from './buttonFunctions.js';
 
 export function welcomeMessage() {
   document.querySelector('.js-welcome-message').innerHTML = `<div class="faded-background">
@@ -47,9 +47,10 @@ export function generateUserChoiceComputer() {
     })
     userChoiceHTML += `</datalist>
     <button class="user-submit js-user-submit">Submit</button>
-    <button class="user-clear">Clear</buttton>`;
+    <button class="user-clear js-user-clear">Clear</buttton>`;
     document.querySelector('.js-user-choice').innerHTML = userChoiceHTML;
     userSubmit();
+    userClear();
 };
 
 export function generateUserChoiceMobile() {
@@ -59,8 +60,10 @@ export function generateUserChoiceMobile() {
       userChoiceHTML += `<option value="${currentCountry.name}">${currentCountry.name}</option>`
     })
     userChoiceHTML += `</select>
-    <button class="user-submit js-user-submit">Submit</button>`;
+    <button class="user-submit js-user-submit">Submit</button>
+    <button class="user-clear js-user-clear">Clear</buttton>`;
     document.querySelector('.js-user-choice').innerHTML = userChoiceHTML;
     userSubmit();
+    userClear();
 };
 

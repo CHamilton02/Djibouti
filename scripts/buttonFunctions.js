@@ -33,4 +33,10 @@ export function userReset() {
     generateNewCountry();
     renderHTML();
   });
-}
+};
+
+export function userClear() {
+  document.querySelector('.js-user-clear').addEventListener('click', () => {
+    document.getElementById('country-choice').value = ''
+  })
+};
