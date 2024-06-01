@@ -255,5 +255,9 @@ export const country = [
   new Country({flag: 'images/Country Flags/Zimbabwe.png', name: 'Zimbabwe', capital: 'Harare', continent: 'Africa', population: 15920000, area: 390757})
   ];
 
-export const desiredCountry = new Country(country[Math.floor(Math.random() * country.length)]);
+export let desiredCountry;
+export function generateNewCountry() {
+  desiredCountry = new Country(country[Math.floor(Math.random() * country.length)]);
+};
+
 export const chosenCountries = [];
