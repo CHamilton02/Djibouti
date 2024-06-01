@@ -55,7 +55,8 @@ export function generateUserChoiceComputer() {
 
 export function generateUserChoiceMobile() {
   let userChoiceHTML = `<select class="user-input" list="countries" id="country-choice" name="country-choice"/>
-    <datalist id="countries">`;
+    <datalist id="countries">
+      <option value="">Select a country</option>`;
     country.forEach((currentCountry) => {
       userChoiceHTML += `<option value="${currentCountry.name}">${currentCountry.name}</option>`
     })
