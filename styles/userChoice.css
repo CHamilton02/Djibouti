@@ -26,3 +26,7 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+.user-submit:hover {
+  background-color: rgb(29, 181, 231);
+}
