@@ -14,7 +14,8 @@
   height: 35px;
 }
 
-.user-submit {
+.user-submit,
+.user-clear {
   color: white;
   font-family: Jaro;
   font-size: 20px;
@@ -27,6 +28,7 @@
   cursor: pointer;
 }
 
-.user-submit:hover {
+.user-submit:hover,
+.user-clear:hover {
   background-color: rgb(29, 181, 231);
 }
