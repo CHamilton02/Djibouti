@@ -1,5 +1,5 @@
 import {country, desiredCountry, chosenCountries} from '../data/countries.js';
-import { welcomeMessage } from './renderHTML.js';
+import {welcomeMessage, headers} from './renderHTML.js';
 import {isMobile} from './utils/mobileCheck.js';
 
 function renderHTML() {
@@ -77,12 +77,7 @@ function renderHTML() {
     });
   }
 
-  document.querySelector('.js-country-grid').innerHTML = `<div></div>
-  <div class="column-heading">Country</div>
-  <div class="column-heading">Capital</div>
-  <div class="column-heading">Continent</div>
-  <div class="column-heading">Population</div>
-  <div class="column-heading">Area</div>`
+  headers();
 }
 
 renderHTML();

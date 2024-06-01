@@ -26,3 +26,12 @@ export function welcomeMessage() {
     document.querySelector('.faded-background').remove();
   });
 };
+
+export function headers() {
+  document.querySelector('.js-country-grid').innerHTML = `<div></div>
+  <div class="column-heading">Country</div>
+  <div class="column-heading">Capital</div>
+  <div class="column-heading">Continent</div>
+  <div class="column-heading">Population</div>
+  <div class="column-heading">Area</div>`
+};
