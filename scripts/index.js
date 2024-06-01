@@ -54,6 +54,14 @@ function renderHTML() {
         desiredCountry.generateHTML(desiredCountry);
         document.querySelector('.js-user-choice').innerHTML = '';
         document.querySelector('.js-endgame').innerHTML = `<div class="congrats-message">Congrats! You found the country in ${chosenCountries.length + 1} attempts.</div>`;
+        setTimeout(() => {
+          document.querySelector('.js-endgame').insertAdjacentHTML('beforeend', '<div class="organize-button"><button class="reset-button js-reset-button">Reset</button></div>');
+          document.querySelector('.js-reset-button').addEventListener('click', () => {
+            chosenCountries.length = 0;
+            document.querySelector('.js-endgame').innerHTML = '';
+            renderHTML();
+          });
+        }, 2000);
       } else if (!chosenCountries.includes(chosenValue)) {
         chosenCountries.push(chosenValue);
         country.forEach((chosenCountry) => {
