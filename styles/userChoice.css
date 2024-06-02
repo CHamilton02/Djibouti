@@ -1,6 +1,13 @@
 .user-choice {
   margin-top: 75px;
   text-align: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: -15px;
+  background-color: rgb(163, 208, 223);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .user-input {

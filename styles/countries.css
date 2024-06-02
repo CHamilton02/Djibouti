@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   text-align: center;
-  margin-top: 10px;
+  margin-top: 75px;
+  margin-bottom: 75px;
   row-gap: 20px;
   font-family: Jaro;
   font-size: 24px;

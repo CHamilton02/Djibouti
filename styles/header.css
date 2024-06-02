@@ -4,7 +4,7 @@
   font-size: 46px;
   color: white;
   background-image: url('../images/Country Flags/Collection-national-flags.png');
-  position: absolute;
+  position: fixed;
   left: 0px;
   right: 0px;
   top: 0px;
