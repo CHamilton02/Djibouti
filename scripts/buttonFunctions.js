@@ -3,8 +3,8 @@ import {generateNewCountry, desiredCountry, chosenCountries, country} from '../d
 
 export function userSubmit() {
   document.querySelector('.js-user-submit').addEventListener('click', () => {
-    const chosenValue = document.getElementById('country-choice').value;
-    if (chosenValue === desiredCountry.name) {
+    const chosenValue= document.getElementById('country-choice').value.toUpperCase();
+    if (chosenValue === desiredCountry.name.toUpperCase()) {
       desiredCountry.generateHTML(desiredCountry);
       document.querySelector('.js-user-choice').innerHTML = '';
       document.querySelector('.js-endgame').innerHTML = `<div class="congrats-message">Congrats! You found the country in ${chosenCountries.length + 1} attempts.</div>`;
@@ -15,7 +15,7 @@ export function userSubmit() {
     } else if (!chosenCountries.includes(chosenValue)) {
       chosenCountries.push(chosenValue);
       country.forEach((chosenCountry) => {
-        if (chosenValue === chosenCountry.name) {
+        if (chosenValue === chosenCountry.name.toUpperCase()) {
           chosenCountry.generateHTML(desiredCountry);
         }
       });
