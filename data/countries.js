@@ -53,7 +53,6 @@ export class Country {
       }
       document.querySelector('.js-country-grid').insertAdjacentHTML('beforeend', HTML);
     }
-    document.querySelector('.js-country-grid').scrollTop = document.querySelector('.js-country-grid').scrollHeight;
   }
 }
 
