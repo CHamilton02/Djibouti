@@ -1,12 +1,12 @@
 import {renderHTML} from './index.js';
 import {generateNewCountry, desiredCountry, chosenCountries, country} from '../data/countries.js';
 
-export function userSubmit() {
-  document.querySelector('.js-user-submit').addEventListener('click', () => {
-    const chosenValue= document.getElementById('country-choice').value.toUpperCase();
+function handleSubmit() {
+  const chosenValue= document.getElementById('country-choice').value.toUpperCase();
     if (chosenValue === desiredCountry.name.toUpperCase()) {
       desiredCountry.generateHTML(desiredCountry);
-      document.querySelector('.js-user-choice').innerHTML = '';
+      document.querySelector('.js-user-clear').removeEventListener('click', handleClear);
+      document.querySelector('.js-user-submit').removeEventListener('click', handleSubmit);
       document.querySelector('.js-endgame').innerHTML = `<div class="congrats-message">Congrats! You found the country in ${chosenCountries.length + 1} attempts.</div>`;
       setTimeout(() => {
         document.querySelector('.js-endgame').insertAdjacentHTML('beforeend', '<div class="organize-button"><button class="reset-button js-reset-button">Reset</button></div>');
@@ -23,7 +23,14 @@ export function userSubmit() {
     } else {
       document.getElementById('country-choice').value = '';
     }
-  });
+};
+
+function handleClear() {
+  document.getElementById('country-choice').value = '';
+};
+
+export function userSubmit() {
+  document.querySelector('.js-user-submit').addEventListener('click', handleSubmit);
 };
 
 export function userReset() {
@@ -36,7 +43,5 @@ export function userReset() {
 };
 
 export function userClear() {
-  document.querySelector('.js-user-clear').addEventListener('click', () => {
-    document.getElementById('country-choice').value = ''
-  })
+  document.querySelector('.js-user-clear').addEventListener('click', handleClear);
 };
