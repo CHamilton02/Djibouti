@@ -1,4 +1,4 @@
-import {userClear, userReset} from '../../scripts/buttonFunctions.js'
+import {userClear, userReset, userSubmit} from '../../scripts/buttonFunctions.js'
 
 describe('test suite: Button functions', () => {
   afterEach(() => {
@@ -20,9 +20,15 @@ describe('test suite: Button functions', () => {
 
   it('creates event listener for reset button', () => {
     document.querySelector('.js-endgame').innerHTML = '<button class="reset-button js-reset-button">Reset</button></div>';
-    console.log(document.querySelector('.js-endgame'));
     spyOn(document.querySelector('.js-reset-button'), 'addEventListener');
     userReset();
     expect(document.querySelector('.js-reset-button').addEventListener).toHaveBeenCalledTimes(1);
+  });
+
+  it('creates event listener for submit button', () => {
+    document.querySelector('.js-user-choice').innerHTML = '<button class="user-submit js-user-submit">Submit</button>';
+    spyOn(document.querySelector('.js-user-submit'), 'addEventListener');
+    userSubmit();
+    expect(document.querySelector('.js-user-submit').addEventListener).toHaveBeenCalledTimes(1);
   });
 });
