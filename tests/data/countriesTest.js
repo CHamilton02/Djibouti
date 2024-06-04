@@ -64,4 +64,4 @@ describe('test suite: Country class', () => {
     Canada.generateHTML(Afghanistan);
     expect(document.querySelector('.js-country-grid').innerHTML).toContain(`<img class="country-grid-flag" src="images/Country Flags/Canada.png"><div class="country-details-animation"><span class="incorrect-value">C</span>anada</div><div class="country-details-animation"><span class="incorrect-value">O</span>ttawa</div><div class="country-details-animation incorrect-value">North America</div><div class="country-details-animation">40769890 <span class="arrow">↑</span></div><div class="country-details-animation">9984670km² <span class="arrow">↓</span></div>`);
   })
-})
+});
