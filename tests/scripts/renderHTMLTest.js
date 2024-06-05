@@ -1,4 +1,4 @@
-import {welcomeMessage} from '../../scripts/renderHTML.js';
+import {welcomeMessage, headers} from '../../scripts/renderHTML.js';
 
 function normalizeString(str) {
   return str.replace(/\s+/g, ' ').trim();
@@ -30,5 +30,18 @@ describe('test suite: Render HTML', () => {
     </div>`)
     expect(actualHTML).toMatch(expectedHTML);
     document.querySelector('.js-welcome-message').innerHTML = '';
+  });
+
+  it('creates headers', () => {
+    headers();
+    const actualHTML = normalizeString(document.querySelector('.js-country-grid').innerHTML);
+    const expectedHTML = normalizeString(`<div></div>
+    <div class="column-heading">Country</div>
+    <div class="column-heading">Capital</div>
+    <div class="column-heading">Continent</div>
+    <div class="column-heading">Population</div>
+    <div class="column-heading">Area</div>`);
+    expect(actualHTML).toMatch(expectedHTML);
+    document.querySelector('.js-country-grid').innerHTML = '';
   });
 });
