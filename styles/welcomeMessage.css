@@ -8,12 +8,12 @@
 }
 
 .welcome-box {
-  width: 515px;
+  width: 600px;
   background-color: rgb(240, 240, 240);
   color: rgb(95, 198, 233);
   padding: 20px 20px 20px 20px;
   font-family: Jaro;
-  font-size: 20px;
+  font-size: 28px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -23,7 +23,7 @@
 }
 
 .welcome-title {
-  font-size: 30px;
+  font-size: 42px;
   color: white;
   background-color: rgb(95, 198, 233);
   margin-bottom: 10px;
