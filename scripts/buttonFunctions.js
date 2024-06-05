@@ -29,17 +29,19 @@ function handleClear() {
   document.getElementById('country-choice').value = '';
 };
 
+function handleReset() {
+  chosenCountries.length = 0;
+  document.querySelector('.js-endgame').innerHTML = '';
+  generateNewCountry();
+  renderHTML();
+}
+
 export function userSubmit() {
   document.querySelector('.js-user-submit').addEventListener('click', handleSubmit);
 };
 
 export function userReset() {
-  document.querySelector('.js-reset-button').addEventListener('click', () => {
-    chosenCountries.length = 0;
-    document.querySelector('.js-endgame').innerHTML = '';
-    generateNewCountry();
-    renderHTML();
-  });
+  document.querySelector('.js-reset-button').addEventListener('click', handleReset);
 };
 
 export function userClear() {
